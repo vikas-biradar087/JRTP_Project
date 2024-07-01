@@ -1,0 +1,28 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+        
+spring:
+  application:
+    name: REST_API
+  boot:
+    admin:
+      client:
+        url:
+        -  http://localhost:4040/
+        
+  cloud:
+    compatibility-verifier:
+      enabled: false

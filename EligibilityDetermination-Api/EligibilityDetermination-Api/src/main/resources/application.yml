@@ -1,0 +1,40 @@
+spring:
+#  boot:
+#    admin:
+#      client:
+#        url:
+#          - http://localhost:6060/
+  application:
+    name: ELIGIBILITY-API
+  datasource:
+    username: root
+    password: Vikas@12345
+    url: jdbc:mysql://localhost:3306/elg-api
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MYSQL8Dialect
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+
+
+server:
+  port: 9090

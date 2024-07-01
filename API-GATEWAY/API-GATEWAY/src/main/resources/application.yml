@@ -1,0 +1,31 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: API-GATEWAY
+
+  main:
+    web-application-type: reactive
+
+  cloud:
+    gateway:
+      routes:
+        - id: API
+          uri: lb://API
+          predicates:
+            - Path=/api
+
+        - id: REST_API
+          uri: lb://REST_API
+          predicates:
+            - Path=/RestApi/**
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka

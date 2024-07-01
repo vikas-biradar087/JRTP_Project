@@ -1,0 +1,32 @@
+server:
+  port: 9495
+
+spring:
+  application:
+    name: API
+  boot:
+    admin:
+      client:
+        url: 
+          - http://localhost:4040/
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+
+
+
+

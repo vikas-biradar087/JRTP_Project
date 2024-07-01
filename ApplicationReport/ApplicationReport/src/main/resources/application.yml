@@ -1,0 +1,24 @@
+server:
+  port: 8384
+  
+spring:
+  application:
+    name: AR-API
+  
+  datasource:
+      username:
+      password: 
+      url: 
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:6060/
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*' 
+    

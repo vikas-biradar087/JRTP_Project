@@ -1,0 +1,10 @@
+Hi ${FNAME} ${LNAME}, <br/>
+<br/>
+
+Your Registration Almost Successfully Done <br/>
+<br/>
+Temporary Pwd : ${TEMP_PWD} <br/>
+<br/>
+
+<a href="http://localhost:4200/unlock?email=${EMAIl}">Click here to unlock<a/> <br/>
+<br/>
